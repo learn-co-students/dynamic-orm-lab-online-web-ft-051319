@@ -50,8 +50,6 @@ class InteractiveRecord
     value_type = value.class.is_a?(Integer) ? value : "'#{value}'"
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0]} = #{value_type}"
     DB[:conn].execute(sql)
-
   end
-
 
 end
